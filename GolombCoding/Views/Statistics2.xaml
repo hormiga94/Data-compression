@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="GolombCoding.Views.Statistics2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GolombCoding.Views"
+             xmlns:charting="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="500">
+    <Grid Background="#CCE5E5">
+        <charting:Chart Name="myChart" Background="#b7cece" DataContext="{Binding}" IsTabStop="True" Title="Długość słowa" Margin="20,112,33,10" Visibility="Visible">
+
+            <charting:ColumnSeries Title="Długość słowa" ItemsSource="{Binding}"  DependentValueBinding="{Binding Path=Value}" IndependentValueBinding="{Binding Path=Key}" IsSelectionEnabled="True" Margin="1,0,0,0"  />
+
+            <charting:Chart.Axes>
+                <charting:LinearAxis Orientation="Y" Title="Długość słowa" ShowGridLines="True"/>
+                <charting:CategoryAxis Orientation="X" Title="mod"/>
+            </charting:Chart.Axes>
+
+        </charting:Chart>
+
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="107,62,0,0" TextWrapping="Wrap" Text="X" VerticalAlignment="Top" Width="35" Name="xTxt"/>
+        <Label Content="mod" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="157,59,0,0" RenderTransformOrigin="0.576,0.025"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Y1 (od)" VerticalAlignment="Top" Width="45" Margin="206,62,0,0" Name="y1Txt"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Y2 (do)" VerticalAlignment="Top" Width="45" Margin="265,63,0,0" Name="y2Txt"/>
+        <Button Content="Sprawdź!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="325,63,0,0" Height="23" Click="Button_Click"/>
+    </Grid>
+</UserControl>

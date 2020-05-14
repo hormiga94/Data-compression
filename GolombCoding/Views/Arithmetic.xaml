@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="GolombCoding.Views.Arithmetic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GolombCoding.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="500">
+    <Grid Background="#CCE5E5">
+        <Button Content="Koduj!" Name="ArtBtnEn" HorizontalAlignment="Left" Margin="214,136,0,0" VerticalAlignment="Top" Width="75" Click="ArtBtnEn_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Name="EnTxtEn" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="33,137,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="82" Name="EnTxtRes" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="341,136,0,0" Background="#CCE5E5" IsReadOnly="True" BorderThickness="0"/>
+
+        <Button Content="Dekoduj!" Name="ArtBtnDe" HorizontalAlignment="Left" Margin="214,222,0,0" VerticalAlignment="Top" Width="75" Click="ArtBtnDe_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Name="DeTxtEn" VerticalAlignment="Top" Width="120" Margin="33,223,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="88" TextWrapping="Wrap" Name="DeTxtRes" VerticalAlignment="Top" Width="120" Margin="341,223,0,0" Background="#CCE5E5" IsReadOnly="True" BorderThickness="0"/>
+
+        <Button Content="Koduj plik!" Name="FileBtnEn" HorizontalAlignment="Left" Margin="143,351,0,0" VerticalAlignment="Top" Width="75" Click="FileBtnEn_Click"/>
+        <Button Content="Dekoduj plik!" Name="FileBtnDe" HorizontalAlignment="Left" Margin="280,351,0,0" VerticalAlignment="Top" Width="75" Click="FileBtnDe_Click"/>
+
+
+
+
+
+    </Grid>
+</UserControl>
